@@ -1,0 +1,51 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释。true：是;false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+        <!-- 注意: & 要改成转义字符 &amp; -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://124.223.10.250:3306/my_blog?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf-8"
+                        userId="root"
+                        password="413902">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.hengtiansoft.myblog.entity.po" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.hengtiansoft.myblog.mapper"
+                             targetProject="src/main/java"/>
+
+        <table tableName="t_blog">
+            <domainObjectRenamingRule searchString="^T" replaceString=""></domainObjectRenamingRule>
+        </table>
+        <table tableName="t_category">
+            <domainObjectRenamingRule searchString="^T" replaceString=""></domainObjectRenamingRule>
+        </table>
+        <table tableName="t_comment">
+            <domainObjectRenamingRule searchString="^T" replaceString=""></domainObjectRenamingRule>
+        </table>
+        <table tableName="t_config">
+            <domainObjectRenamingRule searchString="^T" replaceString=""></domainObjectRenamingRule>
+        </table>
+        <table tableName="t_link">
+            <domainObjectRenamingRule searchString="^T" replaceString=""></domainObjectRenamingRule>
+        </table>
+        <table tableName="t_tag">
+            <domainObjectRenamingRule searchString="^T" replaceString=""></domainObjectRenamingRule>
+        </table>
+        <table tableName="t_tag_relation">
+            <domainObjectRenamingRule searchString="^T" replaceString=""></domainObjectRenamingRule>
+        </table>
+        <table tableName="t_user">
+            <domainObjectRenamingRule searchString="^T" replaceString=""></domainObjectRenamingRule>
+        </table>
+    </context>
+</generatorConfiguration>

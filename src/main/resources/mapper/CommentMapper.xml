@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hengtiansoft.myblog.mapper.CommentMapper">
+  <resultMap id="BaseResultMap" type="com.hengtiansoft.myblog.entity.po.Comment">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="blog_id" jdbcType="BIGINT" property="blogId" />
+    <result column="commentator" jdbcType="VARCHAR" property="commentator" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="website_url" jdbcType="VARCHAR" property="websiteUrl" />
+    <result column="comment_body" jdbcType="VARCHAR" property="commentBody" />
+    <result column="comment_create_time" jdbcType="TIMESTAMP" property="commentCreateTime" />
+    <result column="commentator_ip" jdbcType="VARCHAR" property="commentatorIp" />
+    <result column="reply_body" jdbcType="VARCHAR" property="replyBody" />
+    <result column="reply_create_time" jdbcType="TIMESTAMP" property="replyCreateTime" />
+    <result column="comment_status" jdbcType="TINYINT" property="commentStatus" />
+    <result column="is_deleted" jdbcType="TINYINT" property="isDeleted" />
+  </resultMap>
+
+</mapper>
